@@ -276,6 +276,34 @@ body {
 
 }
 
+.about__text {
+    height: 90px;
+    margin: 0 16px 10px 16px;
+
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+
+    overflow: hidden;   
+}
+
+@media (min-width: 620px) {
+
+    .about__text {
+        height: 125px;
+        margin: 0 48px 10px 24px;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .about__text {
+        height: 145px;
+        margin: 0 36px 10px 34px;
+    }
+}
 
 .button {
     display: flex;
@@ -329,36 +357,7 @@ body {
 
 }
 
-.about__text {
-    height: 90px;
-    margin: 0 16px 0 16px;
 
-    font-family: 'TT Lakes';
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.2px;
-    color: #1B1C21;
-
-    overflow: hidden;   
-}
-
-@media (min-width: 620px) {
-
-    .about__text {
-        height: 125px;
-        margin: 0 48px 10px 24px;
-    }
-
-}
-
-@media (min-width: 1000px) {
-
-    .about__text {
-        height: 145px;
-        margin: 0 36px 10px 34px;
-    }
-
-}
 
 /* about__image */
 
