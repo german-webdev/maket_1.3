@@ -195,10 +195,20 @@ body {
 .repair-form {
     display: flex;
     align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
 }
 
 .repair-form__image {
     padding-left: 8px;
+}
+
+.title__content_form {
+    cursor: pointer;
 }
 
 .title__content_form:not(:first-child) {
@@ -206,8 +216,7 @@ body {
 }
 
 
-    
-
+/* Navigation */
 
 .nav {
     display: flex;
