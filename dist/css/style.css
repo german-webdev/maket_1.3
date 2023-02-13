@@ -55,10 +55,6 @@ body {
     margin-right: auto;
 }
 
-
-
-
-
 @media (min-width: 620px) {
 
     .logo {
@@ -86,7 +82,7 @@ body {
     display: none;
 }
 
-@media (min-width: 345px) {
+@media (min-width: 620px) {
         .feedback {
         display: flex;
         flex-wrap: nowrap;
