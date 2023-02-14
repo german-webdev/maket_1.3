@@ -1,0 +1,431 @@
+/* Normalize */
+
+*,
+*::after,
+*::before,
+*:active,
+*:focus
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: unset;
+    border: none;
+    background: none;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    font-family: 'TT Lakes', sans-serif;
+}
+
+/* ------------- Header-open -------------- */
+
+.header {
+    width: 100%;
+}
+
+@media (min-width: 1000px) {
+    .header {
+        display: none;
+    }
+}
+
+
+    /* ----------- Menu ------------ */
+.menu {
+    display: flex;
+    
+    align-items: center;
+    padding: 24px 16px;
+
+
+    position: relative;
+    
+    height: 88px;
+    background-color: #FFFFFF;
+    left: 0px;
+    top: 0px;
+    bottom: 0;
+    right: 0;
+
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    display: flex;
+    margin-right: auto;
+}
+
+@media (min-width: 620px) {
+
+    .logo {
+        margin-left: 24px;
+    }
+
+    .logo::before {
+        position: relative;
+        top: 10px;
+        left: -20px;
+        width: 2px;
+        height: 32px;
+     
+    
+        background: #EAEAEA;
+        border-radius: 1px;
+        text-align: center;
+    
+        content: "";
+    }
+}
+
+.feedback {
+    display: none;
+}
+
+.feedback__item:not(:last-child),
+.burger
+{
+    margin: 0 16px 0 0;
+}
+
+@media (min-width: 620px) {
+        .feedback {
+        display: flex;
+        flex-wrap: nowrap;
+
+        margin-left: 25px;
+        overflow: hidden;
+    }
+}
+
+.support {
+    display: flex;
+}
+
+.support__item {
+    display: flex;
+    align-items: center;
+}
+
+.support__text {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    color: #1B1C21;
+
+    padding: 0 8px 0 0;
+}
+
+.support__item--margin {
+    margin: 0 32px 0 32px;
+}
+
+.support__item--margin--margin-right {
+    margin: 0 16px 0 0;
+}
+
+.support--stick::before {
+    position: relative;
+    top: 5px;
+    right: 20px;
+    width: 2px;
+    height: 32px;
+    margin-left: 38.73px;
+
+    background: #EAEAEA;
+    border-radius: 1px;
+    text-align: center;
+
+    content: "";
+}
+
+.bgc-figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+
+    background-color: #FF3E79;
+    border-radius: 50%;
+}
+
+/* ------------- Header-closed -------------- */
+
+
+
+/* ------------- Main-open -------------- */
+
+.main {
+    width: 100%;
+    height: auto;
+    background: #F8F8F8;
+}
+
+    /* ---------- Title ----------- */
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 0 0 0;
+}
+
+.title::before {
+    display: block;
+    width: 4px;
+    height: 40px;
+    position: relative;
+    left: 0;
+    top: 0;
+
+    border-radius:  0 5px 5px 0;
+    
+    background: #41F6D7;
+    content: "";
+}
+
+.title__text {
+    margin: 0 auto 0 0;
+    padding: 0 0 0 12px;
+    font-size: 28px;
+    letter-spacing: -0.6px;
+    line-height: 40px;
+    color: #1B1C21;
+}
+
+.title__support {
+    display: none;
+}
+
+@media (min-width: 620px) {
+
+    .title {
+        padding: 24px 0 0 0;
+    }
+
+    .title__text {
+        padding: 0 0 0 20px;
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .title {
+        padding: 42px 0 0 0;
+    }
+
+    .title__text {
+        padding: 0 0 0 30px;
+    }
+
+    .title__support {
+        display: flex;
+    }
+
+}
+
+
+
+
+/* ---------- Navigation ----------- */
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    min-height: 40px;
+
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    
+    margin: 24px 0 0 16px;
+
+    list-style-type: none;
+    overflow-x: auto;
+}
+
+.nav__list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.nav__link { 
+    white-space: nowrap; 
+    padding: 8px 16.54px 8px 16.54px;
+}
+
+.nav__link:focus,
+.nav__link:active {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+.nav__link--active {   
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+
+@media (min-width: 620px) {
+
+    .nav__list {
+        margin: 32px 0 0 24px;
+    }
+
+}
+
+@media (min-width: 1100px) {
+
+    .nav__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: 8.32px 37px 0 32px;
+    }
+
+}
+
+
+
+    /* ---------- About ----------- */
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: auto;
+
+    margin: 24px 0 0 0;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    max-height: 90px;
+
+    padding: 0 16px 0 16px;
+
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+
+    overflow: hidden;
+}
+
+.about__button {
+    display: flex;
+    padding: 16px 0 16px 40px;
+}
+
+.about__button::before {
+    display: block;
+    width: 5.5px;
+    height: 5.5px;
+
+    position: relative;
+    top: 5px;
+    right: 16px;
+
+    border-left: 2px solid #58F6DB;
+    border-bottom: 2px solid #58F6DB;
+    border-radius: 1px;
+
+    transform: rotate(-45deg);
+
+    content: "";
+}
+
+.about__button::after {
+    display: block;
+
+    width: 5.5px;
+    height: 5.5px;
+
+    position: relative;
+    top: 11px;
+    right: 119.8px;
+
+    border-left: 2px solid #58F6DB;
+    border-bottom: 2px solid #58F6DB;
+    border-radius: 1px;
+
+    transform: rotate(-45deg);
+   
+    content: "";
+}
+
+.button__content {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+
+.image-box__image {
+    border-radius: 6px;
+}
+
+@media (min-width: 620px) {
+
+    .about {
+        flex-wrap: nowrap;
+        padding: 0 25px 0 24px;
+    }
+
+    .about__text {
+        line-height: 20px;
+        max-height: 105px;
+        padding: 0 48px 10px 0;
+    }
+
+    .about__button {
+        padding: 10px 0 16px 25px;
+    } 
+}
+
+@media (min-width: 992px) {
+
+    .about {
+        margin: 15px 0 0 0;
+        padding: 0 28.65px 0 34px;
+    }
+
+    .about__button {
+        padding: 10px 0 16px 22px;
+    }
+
+    .about__text {
+        max-height: 180px;
+        padding: 0 36px 10px 0;
+    }
+
+}
+
+
+/* ------------- Main-close -------------- */
+
+
+/* to be continue... */
