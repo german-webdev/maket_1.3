@@ -2,7 +2,9 @@
 
 *,
 *::after,
-*::before
+*::before,
+*:active,
+*:focus
 {
     box-sizing: border-box;
     margin: 0;
@@ -13,14 +15,20 @@
     background: none;
 }
 
+a,
+button {
+    cursor: pointer;
+}
+
 body {
+    min-width: 320px;
     margin: 0;
     padding: 0;
     font-family: 'TT Lakes', sans-serif;
 }
 
+/* ------------- Header-open -------------- */
 
-/* Header */
 .header {
     width: 100%;
 }
@@ -31,6 +39,8 @@ body {
     }
 }
 
+
+    /* ----------- Menu ------------ */
 .menu {
     display: flex;
     
@@ -44,10 +54,11 @@ body {
     background-color: #FFFFFF;
     left: 0px;
     top: 0px;
+    bottom: 0;
+    right: 0;
 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
-
 
 .logo {
     display: flex;
@@ -80,6 +91,12 @@ body {
     display: none;
 }
 
+.feedback__item:not(:last-child),
+.burger
+{
+    margin: 0 16px 0 0;
+}
+
 @media (min-width: 620px) {
         .feedback {
         display: flex;
@@ -90,25 +107,41 @@ body {
     }
 }
 
-.burger,
-.repair,
-.call,
-.chat
-{
-    margin-right: 16px;
-}
-
 .support {
     display: flex;
 }
 
-.support::before {
+.support__item {
+    display: flex;
+    align-items: center;
+}
+
+.support__text {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    color: #1B1C21;
+
+    padding: 0 8px 0 0;
+}
+
+.support__item--margin {
+    margin: 0 32px 0 32px;
+}
+
+.support__item--margin--margin-right {
+    margin: 0 16px 0 0;
+}
+
+.support--stick::before {
     position: relative;
     top: 5px;
     right: 20px;
     width: 2px;
     height: 32px;
-    margin-left: 40px;
+    margin-left: 38.73px;
 
     background: #EAEAEA;
     border-radius: 1px;
@@ -118,30 +151,36 @@ body {
 }
 
 .bgc-figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-width: 40px;
     min-height: 40px;
+
     background-color: #FF3E79;
     border-radius: 50%;
 }
 
+/* ------------- Header-closed -------------- */
 
-/* Main */
+
+
+/* ------------- Main-open -------------- */
 
 .main {
-    background-color: #F8F8F8;
+    width: 100%;
+    height: auto;
+    background: #F8F8F8;
 }
 
-@media (min-width: 100px) {
-    .section {
-        padding-top: 42px;
-
-    }
-}
+    /* ---------- Title ----------- */
 
 .title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding: 24px 0 0 0;
 }
 
 .title::before {
@@ -159,81 +198,76 @@ body {
 }
 
 .title__text {
-    margin: 0 auto 0 16px;
-    
+    margin: 0 auto 0 0;
+    padding: 0 0 0 12px;
     font-size: 28px;
     letter-spacing: -0.6px;
     line-height: 40px;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     color: #1B1C21;
 }
 
-.title__content {
+.title__support {
     display: none;
-    align-items: center;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 620px) {
 
-    .title__content {
-        display: flex;
+    .title {
+        padding: 24px 0 0 0;
+    }
+
+    .title__text {
+        padding: 0 0 0 20px;
     }
 }
 
-.repair-form {
-    display: flex;
-    align-items: center;
 
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #1B1C21;
-}
+@media (min-width: 992px) {
 
-.repair-form__image {
-    padding-left: 8px;
-}
+    .title {
+        padding: 42px 0 0 0;
+    }
 
-.title__content_form {
-    cursor: pointer;
-}
+    .title__text {
+        padding: 0 0 0 30px;
+    }
 
-.title__content_form:not(:first-child) {
-    margin: 0 32px;
+    .title__support {
+        display: flex;
+    }
+
 }
 
 
-/* Navigation */
 
-.nav {
+
+/* ---------- Navigation ----------- */
+
+.nav__list {
     display: flex;
     justify-content: space-between;
     min-height: 40px;
-    overflow-x: auto;
-    margin: 24px 16px;
-}
 
-@media (min-width: 1110px) {
-
-    .nav {
-        display: flex;
-        flex-wrap: wrap;
-        min-height: 40px;
-        margin: 24px 16px;
-    }
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
     
+    margin: 24px 0 0 16px;
 
+    list-style-type: none;
+    overflow-x: auto;
 }
 
-.nav::-webkit-scrollbar {
+.nav__list::-webkit-scrollbar {
     width: 0;
+    height: 0;
 }
 
 .nav__link { 
-    max-width: 246px;
     white-space: nowrap; 
-    padding: 8px 16.54px;
+    padding: 8px 16.54px 8px 16.54px;
 }
 
 .nav__link:focus,
@@ -242,29 +276,53 @@ body {
     border-radius: 6px;
 }
 
-.active {   
+.nav__link--active {   
     border: 2px solid #B8FFEC;
     border-radius: 6px;
 }
 
-.about {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 320px;
-    height: 322px;
-
-}
 
 @media (min-width: 620px) {
-    .about {
-        flex-wrap: nowrap;
+
+    .nav__list {
+        margin: 32px 0 0 24px;
     }
 
 }
 
+@media (min-width: 1100px) {
+
+    .nav__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: 8.32px 37px 0 32px;
+    }
+
+}
+
+
+
+    /* ---------- About ----------- */
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: auto;
+
+    margin: 24px 0 0 0;
+}
+
 .about__text {
-    height: 90px;
-    margin: 0 16px 10px 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    max-height: 90px;
+
+    padding: 0 16px 0 16px;
 
     font-family: 'TT Lakes';
     font-size: 14px;
@@ -272,97 +330,102 @@ body {
     letter-spacing: 0.2px;
     color: #1B1C21;
 
-    overflow: hidden;   
+    overflow: hidden;
 }
 
-@media (min-width: 620px) {
-
-    .about__text {
-        height: 125px;
-        margin: 0 48px 10px 24px;
-    }
-}
-
-@media (min-width: 1000px) {
-
-    .about__text {
-        height: 145px;
-        margin: 0 36px 10px 34px;
-    }
-}
-
-.button {
+.about__button {
     display: flex;
-
-    margin-left: 24px;
-    margin-bottom: 16px;
+    padding: 16px 0 16px 40px;
 }
 
-@media (min-width: 1000px) {
+.about__button::before {
+    display: block;
+    width: 5.5px;
+    height: 5.5px;
 
-    .button {
-        margin-left: 40.29px;
-    }
-
-}
-
-.button-arrow {
-    width: 5px;
-    height: 5px;
     position: relative;
-    top: 6px;
-    border-left: 1.5px solid #58F6DB;
-    border-bottom: 1.5px solid #58F6DB;
+    top: 5px;
+    right: 16px;
+
+    border-left: 2px solid #58F6DB;
+    border-bottom: 2px solid #58F6DB;
     border-radius: 1px;
+
     transform: rotate(-45deg);
 
+    content: "";
 }
 
-.button-arrow::after {
+.about__button::after {
     display: block;
-    width: 5px;
-    height: 5px;
-    position: relative;
-    top: 3.5px;
-    left: -5px;
 
-    border-left: 1.5px solid #58F6DB;
-    border-bottom: 1.5px solid #58F6DB;
+    width: 5.5px;
+    height: 5.5px;
+
+    position: relative;
+    top: 11px;
+    right: 119.8px;
+
+    border-left: 2px solid #58F6DB;
+    border-bottom: 2px solid #58F6DB;
     border-radius: 1px;
+
+    transform: rotate(-45deg);
    
     content: "";
 }
 
 .button__content {
-    padding-left: 16px;
+    font-family: inherit;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
-
 }
 
-
-
-/* about__image */
+.image-box__image {
+    border-radius: 6px;
+}
 
 @media (min-width: 620px) {
 
-    .about__image {
-        width: 360px;
-        height: 208px;
-        margin: 0 25px 0 0;
+    .about {
+        flex-wrap: nowrap;
+        padding: 0 25px 0 24px;
+    }
+
+    .about__text {
+        line-height: 20px;
+        max-height: 140px;
+        padding: 0 48px 10px 0;
+    }
+
+    .about__button {
+        padding: 10px 0 16px 25px;
+    } 
+}
+
+@media (min-width: 992px) {
+
+    .about {
+        margin: 15px 0 0 0;
+        padding: 0 28.65px 0 34px;
+    }
+
+    .about__button {
+        padding: 10px 0 16px 22px;
+    }
+
+    .about__text {
+        max-height: 180px;
+        padding: 0 36px 10px 0;
     }
 
 }
 
-@media (min-width: 1000px) {
 
-    .about__image {
-        width: 531.35px;
-        height: 307px;
-        margin: 0 28.65px 0 0;
-    }
+/* ------------- Main-close -------------- */
 
-}
+
+/* to be continue... */
