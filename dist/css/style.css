@@ -364,7 +364,7 @@ body {
 
     position: relative;
     top: 11px;
-    right: 119.8px;
+    right: 126px;
 
     border-left: 2px solid #58F6DB;
     border-bottom: 2px solid #58F6DB;
@@ -378,7 +378,7 @@ body {
 .button__content {
     font-family: inherit;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
