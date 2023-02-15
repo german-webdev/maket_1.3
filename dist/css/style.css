@@ -338,7 +338,7 @@ body {
     padding: 16px 0 16px 40px;
 }
 
-.about__button::before {
+.button__arrow {
     display: block;
     width: 5.5px;
     height: 5.5px;
@@ -353,24 +353,25 @@ body {
 
     transform: rotate(-45deg);
 
-    content: "";
 }
 
-.about__button::after {
+.button__arrow::after {
     display: block;
 
     width: 5.5px;
     height: 5.5px;
 
     position: relative;
-    top: 11px;
-    right: 126px;
+ 
+    left: -6px;
+
+    bottom: -4px;
 
     border-left: 2px solid #58F6DB;
     border-bottom: 2px solid #58F6DB;
     border-radius: 1px;
 
-    transform: rotate(-45deg);
+    
    
     content: "";
 }
@@ -378,7 +379,7 @@ body {
 .button__content {
     font-family: inherit;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
