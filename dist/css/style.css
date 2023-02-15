@@ -397,12 +397,12 @@ body {
 
     .about__text {
         line-height: 20px;
-        max-height: 105px;
+        max-height: 112px;
         padding: 0 48px 10px 0;
     }
 
     .about__button {
-        padding: 10px 0 16px 25px;
+        padding: 10px 0 10px 25px;
     } 
 }
 
@@ -418,7 +418,7 @@ body {
     }
 
     .about__text {
-        max-height: 180px;
+        max-height: 176px;
         padding: 0 36px 10px 0;
     }
 
