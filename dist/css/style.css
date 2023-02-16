@@ -4,7 +4,8 @@
 *::after,
 *::before,
 *:active,
-*:focus
+*:focus,
+*:hover
 {
     box-sizing: border-box;
     margin: 0;
@@ -291,7 +292,7 @@ body {
     
     padding: 24px 0 0 16px;
 
-    list-style-type: none;
+    list-style: none;
     overflow-x: auto;
 }
 
@@ -302,10 +303,11 @@ body {
 
 .nav__item {
     min-height: 40px;
+    white-space: nowrap; 
+    
 }
 
-.nav__link { 
-    white-space: nowrap; 
+.nav__link {
     padding: 8px 16.54px 8px 16.54px;
 
     font-family: inherit;
@@ -313,6 +315,8 @@ body {
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7E7E82;
+    border: 2px solid transparent;
+    border-radius: 6px;
 }
 
 .nav__link--active,
@@ -320,7 +324,6 @@ body {
 .nav__link:active,
 .nav__link:hover {
     border: 2px solid #B8FFEC;
-    border-radius: 6px;
 }
 
 
